@@ -8,6 +8,7 @@ namespace HumaneSociety
 {
     class Adopter
     {
+        decimal wallet = 0;
         string name;
         int age;
         bool hasDogs;
@@ -22,7 +23,7 @@ namespace HumaneSociety
 
     public Adopter()
     {
-        wallet = 4000.00;
+        wallet = 400.00;
         searchedAnimals = new List<Animal>();
 
     }
@@ -126,9 +127,39 @@ namespace HumaneSociety
     }
     private string CheckYesOrNo(string yesOrNo)
     {
-
+        while (true)
+        {
+            if(yesOrNo == "yes" || yesOrNo == "no")
+            {
+                return yesOrNo;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, please choose a yes or no answer");
+                yesOrNo = Console.ReadLine();
+            }
+        }
     }
 
+    public void CreateAdopterProfile()
+    {
+        adopter = new Adopter();
+        adopter.Name = this.name;
+        adopter.age = this.age;
+        adopter.Have_Dogs = this.hasDogs;
+        adopter.Have_Cats = this.hasCats;
+        adopter.Have_Kids = this.hasKids;
+        adopter.First_Time_Owner = this.FirstTimeOwner;
+        adopter.Wallet = this.Wallet;
+    }
+
+    public Animal Search(List<Animal> possiblePets)
+    {
+        Console.WriteLine("What would you like to search by? Type or Size");
+        string userSearchInput = Console.ReadLine().ToLower();
+
+
+    }
 
 
 
