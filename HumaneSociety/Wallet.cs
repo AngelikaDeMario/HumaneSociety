@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace HumaneSociety
 {
-   public class Employee
+    class Wallet
     {
-        public string name;
-        public string jobTitle;
     }
-
-    public Employee()
-    {
-
-    }
-}
 }
